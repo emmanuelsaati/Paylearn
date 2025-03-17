@@ -37,8 +37,9 @@ function AppRoutes() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/website" element={<Website />} />
+        <Route path="/" element={<Navigate to="/website" replace />} />
         <Route
-          path="/"
+          path="/dashboard"
           element={
             <ProtectedRoute>
               <Dashboard />
@@ -85,7 +86,7 @@ function AppRoutes() {
             </ProtectedRoute>
           }
         />
-        <Route path="*" element={<Navigate to="/" replace />} />
+        <Route path="*" element={<Navigate to="/website" replace />} />
 
         {/* For Tempo routes */}
         {import.meta.env.VITE_TEMPO === "true" && <Route path="/tempobook/*" />}

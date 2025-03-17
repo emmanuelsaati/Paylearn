@@ -157,8 +157,8 @@ const LoanApplicationForm = ({ onSubmit = () => {} }) => {
                 )}
               </div>
               <span className="text-xs mt-2">
-                {stepNumber === 1 && "Personal Info"}
-                {stepNumber === 2 && "Student Info"}
+                {stepNumber === 1 && "Parent Info"}
+                {stepNumber === 2 && "Child Info"}
                 {stepNumber === 3 && "University"}
                 {stepNumber === 4 && "Loan Details"}
                 {stepNumber === 5 && "Documents"}
@@ -185,7 +185,13 @@ const LoanApplicationForm = ({ onSubmit = () => {} }) => {
               >
                 <div className="flex items-center gap-2 mb-4">
                   <User className="h-5 w-5 text-primary" />
-                  <h3 className="text-lg font-medium">Personal Information</h3>
+                  <h3 className="text-lg font-medium">Parent Information</h3>
+                </div>
+                <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-4">
+                  <p className="text-sm text-blue-700">
+                    As a parent, you'll be responsible for the loan repayments
+                    through your NASSIT pension or salary deductions.
+                  </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -277,7 +283,13 @@ const LoanApplicationForm = ({ onSubmit = () => {} }) => {
               >
                 <div className="flex items-center gap-2 mb-4">
                   <School className="h-5 w-5 text-primary" />
-                  <h3 className="text-lg font-medium">Student Information</h3>
+                  <h3 className="text-lg font-medium">Child's Information</h3>
+                </div>
+                <div className="bg-amber-50 border-l-4 border-amber-500 p-4 mb-4">
+                  <p className="text-sm text-amber-700">
+                    Please provide details about your child who will be
+                    attending the university.
+                  </p>
                 </div>
 
                 <FormField
@@ -285,7 +297,7 @@ const LoanApplicationForm = ({ onSubmit = () => {} }) => {
                   name="studentName"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Student Full Name</FormLabel>
+                      <FormLabel>Child's Full Name</FormLabel>
                       <FormControl>
                         <Input placeholder="Jane Doe" {...field} />
                       </FormControl>
@@ -504,6 +516,12 @@ const LoanApplicationForm = ({ onSubmit = () => {} }) => {
                   <DollarSign className="h-5 w-5 text-primary" />
                   <h3 className="text-lg font-medium">Loan Details</h3>
                 </div>
+                <div className="bg-green-50 border-l-4 border-green-500 p-4 mb-4">
+                  <p className="text-sm text-green-700">
+                    NASSIT pensioners and salaried employees qualify for special
+                    repayment terms with automatic deductions.
+                  </p>
+                </div>
 
                 <FormField
                   control={form.control}
@@ -570,6 +588,9 @@ const LoanApplicationForm = ({ onSubmit = () => {} }) => {
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
+                          <SelectItem value="nassit_deduction">
+                            NASSIT Pension Deduction
+                          </SelectItem>
                           <SelectItem value="salary_deduction">
                             Automatic Salary Deduction
                           </SelectItem>
@@ -617,16 +638,16 @@ const LoanApplicationForm = ({ onSubmit = () => {} }) => {
 
                   <div className="border rounded-lg p-4 flex flex-col items-center justify-center gap-2 bg-muted/20">
                     <Upload className="h-8 w-8 text-muted-foreground" />
-                    <p className="font-medium">Proof of Income</p>
+                    <p className="font-medium">Proof of Income/NASSIT Status</p>
                     <p className="text-xs text-muted-foreground text-center">
-                      Upload pay slips, bank statements, or tax returns
+                      Upload pay slips, NASSIT pension statement, or tax returns
                     </p>
                     <Input type="file" className="mt-2" />
                   </div>
 
                   <div className="border rounded-lg p-4 flex flex-col items-center justify-center gap-2 bg-muted/20">
                     <Upload className="h-8 w-8 text-muted-foreground" />
-                    <p className="font-medium">Student Enrollment</p>
+                    <p className="font-medium">Child's Enrollment</p>
                     <p className="text-xs text-muted-foreground text-center">
                       Upload proof of enrollment or admission letter
                     </p>

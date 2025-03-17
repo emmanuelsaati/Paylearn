@@ -51,7 +51,8 @@ const LoanStatusCard = ({
   };
 
   return (
-    <Card className="w-full max-w-[600px] h-[200px] bg-white overflow-hidden">
+    <Card className="w-full max-w-[600px] h-[200px] bg-white overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow relative">
+      <div className="absolute -right-10 -bottom-10 w-40 h-40 rounded-full bg-primary/5 blur-2xl"></div>
       <CardHeader className="pb-2">
         <div className="flex justify-between items-center">
           <CardTitle className="text-xl font-bold">Loan Status</CardTitle>
@@ -60,6 +61,9 @@ const LoanStatusCard = ({
         <p className="text-sm text-gray-500">
           For {studentName} at {universityName}
         </p>
+        <div className="bg-primary/10 px-3 py-2 rounded-md text-sm font-medium text-primary inline-flex items-center mt-2">
+          <span className="mr-2">💼</span> NASSIT Pension Deduction Active
+        </div>
       </CardHeader>
       <CardContent>
         <div className="space-y-4">

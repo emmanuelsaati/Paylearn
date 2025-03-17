@@ -111,7 +111,7 @@ const PaymentHistoryCard = ({
   };
 
   return (
-    <Card className="w-full bg-white shadow-sm">
+    <Card className="w-full bg-white shadow-sm hover:shadow-md transition-shadow border border-gray-100">
       <CardHeader className="flex flex-row items-center justify-between pb-2">
         <CardTitle className="text-xl font-bold">{title}</CardTitle>
         <div className="flex items-center space-x-2">

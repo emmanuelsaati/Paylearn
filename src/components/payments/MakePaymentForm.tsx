@@ -139,6 +139,12 @@ const MakePaymentForm = ({
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
+                        <SelectItem value="nassit_deduction">
+                          NASSIT Pension Deduction
+                        </SelectItem>
+                        <SelectItem value="salary_deduction">
+                          Salary Deduction
+                        </SelectItem>
                         <SelectItem value="bank_transfer">
                           Bank Transfer
                         </SelectItem>
@@ -201,6 +207,10 @@ const MakePaymentForm = ({
 
                 <div className="text-sm font-medium">Payment Method:</div>
                 <div className="text-sm">
+                  {formData.paymentMethod === "nassit_deduction" &&
+                    "NASSIT Pension Deduction"}
+                  {formData.paymentMethod === "salary_deduction" &&
+                    "Salary Deduction"}
                   {formData.paymentMethod === "bank_transfer" &&
                     "Bank Transfer"}
                   {formData.paymentMethod === "mobile_money" && "Mobile Money"}

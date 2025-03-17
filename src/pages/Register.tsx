@@ -47,7 +47,7 @@ const Register = () => {
 
       toast({
         title: "Registration Successful",
-        description: "Welcome to Pay-As-You-Learn!",
+        description: "Welcome to Payfee!",
       });
       navigate("/");
     } catch (error) {
@@ -66,8 +66,8 @@ const Register = () => {
     <div className="min-h-screen flex items-center justify-center bg-gray-50 p-4">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-primary">Pay-As-You-Learn</h1>
-          <p className="text-gray-600 mt-2">Study Now, Pay Later</p>
+          <h1 className="text-3xl font-bold text-primary">Payfee</h1>
+          <p className="text-gray-600 mt-2">Parents Fund, Children Learn</p>
         </div>
 
         <Card className="border-t-4 border-t-primary shadow-lg">

@@ -14,17 +14,17 @@ interface QuickActionsCardProps {
 const QuickActionsCard = ({
   actions = [
     {
-      label: "Make Payment",
+      label: "Setup NASSIT Deduction",
       icon: <CreditCard className="h-4 w-4 mr-2" />,
-      onClick: () => console.log("Make payment clicked"),
+      onClick: () => console.log("Setup NASSIT deduction clicked"),
     },
     {
-      label: "New Application",
+      label: "New Child Application",
       icon: <Plus className="h-4 w-4 mr-2" />,
       onClick: () => console.log("New application clicked"),
     },
     {
-      label: "View Documents",
+      label: "View Child Documents",
       icon: <FileText className="h-4 w-4 mr-2" />,
       onClick: () => console.log("View documents clicked"),
     },
@@ -36,7 +36,7 @@ const QuickActionsCard = ({
   ],
 }: QuickActionsCardProps) => {
   return (
-    <Card className="w-full h-full bg-white overflow-hidden">
+    <Card className="w-full h-full bg-white overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
       <CardHeader>
         <CardTitle className="text-lg font-semibold">Quick Actions</CardTitle>
       </CardHeader>

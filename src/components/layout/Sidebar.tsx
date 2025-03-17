@@ -72,7 +72,7 @@ const Sidebar = ({ className = "" }: SidebarProps) => {
 
   const navLinks = [
     {
-      to: "/",
+      to: "/dashboard",
       icon: <Home size={20} />,
       label: "Dashboard",
     },
@@ -101,14 +101,14 @@ const Sidebar = ({ className = "" }: SidebarProps) => {
   return (
     <div
       className={cn(
-        "flex h-full w-[280px] flex-col bg-card p-4 shadow-md",
+        "flex h-full w-[280px] flex-col bg-card p-4 shadow-md sticky top-[70px]",
         className,
       )}
     >
       <div className="flex flex-col space-y-6">
         <div className="flex items-center justify-center py-4">
           <div className="text-center">
-            <h2 className="text-xl font-bold text-primary">PayLearn</h2>
+            <h2 className="text-xl font-bold text-primary">Payfee</h2>
             <p className="text-xs text-gray-500 italic mt-1">
               "Education is the passport to the future"
             </p>

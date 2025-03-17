@@ -75,7 +75,7 @@ const NotificationsCard: React.FC<NotificationsCardProps> = ({
   onViewAll = () => {},
 }) => {
   return (
-    <Card className="w-full h-full bg-white overflow-hidden">
+    <Card className="w-full h-full bg-white overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
       <CardHeader className="pb-2">
         <div className="flex justify-between items-center">
           <CardTitle className="text-lg font-semibold">Notifications</CardTitle>

@@ -37,13 +37,16 @@ const PaymentScheduleCard = ({
   const paymentDates = payments.map((payment) => payment.date);
 
   return (
-    <Card className="w-full h-full bg-white">
+    <Card className="w-full h-full bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
       <CardHeader>
         <CardTitle className="text-xl flex items-center gap-2">
           <CalendarIcon className="h-5 w-5 text-primary" />
           {title}
         </CardTitle>
         <CardDescription>{description}</CardDescription>
+        <div className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium inline-flex items-center mt-2">
+          <span className="mr-1">✓</span> NASSIT Automatic Deduction
+        </div>
       </CardHeader>
       <CardContent>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

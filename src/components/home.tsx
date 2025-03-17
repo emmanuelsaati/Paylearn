@@ -41,7 +41,7 @@ const HomePage = () => {
       <header className="sticky top-0 z-10 bg-white border-b shadow-sm h-[70px]">
         <div className="container mx-auto px-4 h-full flex items-center justify-between">
           <div className="flex items-center">
-            <h1 className="text-xl font-bold text-primary">Pay-As-You-Learn</h1>
+            <h1 className="text-xl font-bold text-primary">Payfee</h1>
           </div>
 
           <div className="flex items-center space-x-4">

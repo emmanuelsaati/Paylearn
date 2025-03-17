@@ -69,7 +69,7 @@ const Navbar = ({
   };
 
   return (
-    <nav className="w-full h-[70px] bg-white border-b border-gray-200 flex items-center justify-between px-4 py-2 shadow-sm">
+    <nav className="w-full h-[70px] bg-white border-b border-gray-200 flex items-center justify-between px-4 py-2 shadow-sm sticky top-0 z-50">
       <div className="flex items-center gap-4">
         <Button
           variant="ghost"
@@ -113,7 +113,7 @@ const Navbar = ({
               />
             </svg>
           </div>
-          <span className="font-bold text-xl hidden sm:inline">PayLearn</span>
+          <span className="font-bold text-xl hidden sm:inline">Payfee</span>
         </Link>
 
         <div className="hidden md:flex items-center gap-6 ml-8">

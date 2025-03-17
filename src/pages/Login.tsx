@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "@/context/AuthContext";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -30,9 +30,9 @@ const Login = () => {
       await login(email, password);
       toast({
         title: "Login Successful",
-        description: "Welcome back to Pay-As-You-Learn!",
+        description: "Welcome back to Payfee!",
       });
-      navigate("/");
+      navigate("/dashboard");
     } catch (error) {
       toast({
         title: "Login Failed",
@@ -48,8 +48,8 @@ const Login = () => {
     <div className="min-h-screen flex items-center justify-center bg-gray-50 p-4">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-primary">Pay-As-You-Learn</h1>
-          <p className="text-gray-600 mt-2">Study Now, Pay Later</p>
+          <h1 className="text-3xl font-bold text-primary">Payfee</h1>
+          <p className="text-gray-600 mt-2">Parents Fund, Children Learn</p>
         </div>
 
         <Card>
